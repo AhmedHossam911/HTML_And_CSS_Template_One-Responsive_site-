@@ -1,0 +1,74 @@
+@media (max-width: 1200px) {
+    .imgcont {
+        display: none;
+    }
+}
+
+@media (max-width: 967px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .Home {
+        overflow: hidden;
+    }
+
+    .heading {
+        font-size: 50px;
+    }
+
+    div .Img,
+    .content img {
+        display: none;
+    }
+
+    .P-text {
+        width: 100%;
+    }
+
+    .Contact .container h3 {
+        font-size: 28px;
+    }
+
+    .Contact .container a {
+        font-size: 25px;
+    }
+
+    .Contact-content p {
+        display: block;
+        text-align: center;
+    }
+
+    .features .container,
+    .services-content,
+    .projects {
+        grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+
+    }
+    
+    .serviceName {
+        padding: 10px;
+    }
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}

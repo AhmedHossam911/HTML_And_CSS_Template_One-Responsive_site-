@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    padding: var(--section-padding);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .logo {
+    width: 60px;
+}
+
+nav .links {
+    position: relative;
+}
+
+.Icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+.Icon span {
+    background-color: black;
+    margin-bottom: 5px;
+}
+
+span.Icon>span:first-child,
+span.Icon>span:nth-child(3) {
+    height: 2px;
+    width: 100%;
+}
+
+span.Icon>span:nth-child(2) {
+    height: 2px;
+    width: 60%;
+    transition: 0.3s;
+}
+
+.links:hover span.Icon>span:nth-child(2) {
+    width: 100%;
+}
+
+.links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    background-color: #f6f6f6;
+    top: calc(100% + 10px);
+    min-width: 200px;
+    display: none;
+}
+
+.links:hover ul {
+    display: block;
+}
+
+.links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+}
+
+.links li a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #cecbcb;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.links li a:hover {
+    padding-left: 25px;
+}
+
+.Home {
+    background-image: url(../Imgs/landing.jpg);
+    background-size: cover;
+    height: calc(100vh);
+    margin-top: 10px;
+}
+
+.Home .Text-intro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    max-width: 100%;
+}
+
+.Home .Text-intro h1 {
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.Home .Text-intro p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.features {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card i {
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+.card h3 {
+    font-weight: 800;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.card p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+}
+
+.heading {
+    color: var(--main-color);
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.P-heading {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.Services .container .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto auto;
+    grid-gap: 30px;
+    margin-top: 100px;
+
+}
+
+.Services i {
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+.serviceName {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.text {
+    flex: 1;
+}
+
+.imgcont {
+    width: 260px;
+    grid-row: span 2;
+    grid-column: -1;
+}
+
+
+.Portfolio {
+    background-color: var(--section-background);
+    padding: var(--section-padding);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    transition: var(--main-duration);
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    transition: var(--main-duration);
+}
+
+.project-card img {
+    max-width: 100%;
+    padding: 0;
+}
+
+.about {
+    padding-top: var(--section-padding);
+    padding-bottom: calc(var(--section-padding) + 60px);
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-flow: nowrap;
+}
+
+.content .Img {
+    position: relative;
+    width: 250px;
+    height: 375px;
+    border: 10px solid #2c4755;
+    border-width: 20px 20px 0 0;
+    box-sizing: content-box;
+}
+
+.content img {
+    width: 100%;
+}
+
+
+.P-text {
+    width: 75%;
+    padding: 40px;
+}
+
+hr {
+    width: 50%;
+    display: inline-block;
+    border-color: var(--main-color);
+}
+
+.P-text p:first-child {
+    font-weight: bold;
+}
+
+.Contact {
+    background-color: var(--section-background);
+}
+
+.Contact-content {
+    text-align: center;
+}
+
+.Contact-content h3 {
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.Contact-content a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.Contact-content p {
+    display: inline-block;
+    padding-right: 10px;
+    font-weight: 800;
+}
+
+.Contact-content i {
+    padding: 5px;
+    transition: var(--main-duration);
+}
+
+.Contact-content i:hover {
+    transform: scale(1.6);
+}
+
+.fa-youtube:hover {
+    color: red;
+}
+
+.fa-facebook-f:hover {
+    color: #006dff;
+}
+
+.fa-twitter:hover {
+    color: #007bb5;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer span {
+    color: #10cab7;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar:hover {
+    display: block;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
